@@ -21,7 +21,7 @@ This isn't a ruleset that you must follow 100% and salute before you go to bed b
 
 ## How
 
-~~Using~~ a method called [BEM](https://en.bem.info/).
+Using a method called [BEM](https://en.bem.info/).
 
 BEM stands for Block Element Modifier and it is more simple than it sounds.
 
@@ -41,20 +41,20 @@ Here is the css selector for the description `body.landing-page div.sub-pages>di
 
 The html structure looks like
 ```html
-<div class=”subpages”>
-	<div class=”row”>
-		<div class=”thumb”><a><img /></a></div>
-		<div class=”description”>
+<div class="subpages">
+	<div class="row">
+		<div class="thumb"><a><img /></a></div>
+		<div class="description">
 			<h3/>
 			<p/>
-			<a class=”read-more” />
+			<a class="read-more" />
 		</div>
 	</div>
 </div>
 ```
 And our css selectors look like
 ```css
-~~body~~.landing-page div.sub-pages{}
+body.landing-page div.sub-pages{}
 body.landing-page div.sub-pages > div.row{}
 body.landing-page div.sub-pages > div.row h3{}
 body.landing-page div.sub-pages > div.row h3:hover{}
@@ -69,19 +69,20 @@ body.landing-page .thumb{}
 ```
 So how can we apply our BEM guidelines to this?
 1. We do not want any references to HTML in our css for specicifity reasons (I'll go into more detail later)
+eg. ~~body~~`.landing-page `~~div~~`.sub-pages>`~~div~~`.row`
 ```css
-body.landing-page div.sub-pages{}
-body.landing-page div.sub-pages > div.row{}
-body.landing-page div.sub-pages > div.row h3{}
-body.landing-page div.sub-pages > div.row h3:hover{}
-body.landing-page div.sub-pages > div.row p{}
-body.landing-page div.sub-pages > div.row div.description{}
+.landing-page .sub-pages{}
+.landing-page .sub-pages > .row{}
+.landing-page .sub-pages > .row h3{}
+.landing-page .sub-pages > .row h3:hover{}
+.landing-page .sub-pages > .row p{}
+.landing-page .sub-pages > .row .description{}
 .read-more{}
 .read-more:hover{}
-body.landing-page div.sub-pages .thumb{}
-body.landing-page div.left div.description p{}
-body.landing-page div.left div.description{}
-body.landing-page .thumb{}
+.landing-page .sub-pages .thumb{}
+.landing-page .left .description p{}
+.landing-page .left .description{}
+.landing-page .thumb{}
 ```
 ## Further reading
 
