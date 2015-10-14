@@ -31,9 +31,42 @@ I will pick on myself here with some examples of CSS I have written for previous
 
 In [Mackillop](http://mackillop.c2gloo.net/) we have a simple sub-pages section.
 
-![Mackillop sub-pages example](https://github.com/lclghst/css/img/example1.png)
+![Mackillop sub-pages example](https://github.com/lclghst/css/blob/master/img/example1.png)
 
+Quite simple when we break it down:
 
+A subpage consists of image on left, description on right.
+
+Here is the css selector for the description `body.landing-page div.sub-pages>div.row` `div.description` AND `body.landing-page div.left div.description`.
+
+The html structure looks like
+```html
+<div class=”subpages”>
+	<div class=”row”>
+		<div class=”thumb”><a><img /></a></div>
+		<div class=”description”>
+			<h3/>
+			<p/>
+			<a class=”read-more” />
+		</div>
+	</div>
+</div>
+```
+And our css selectors look like:
+```css
+body.landing-page div.sub-pages{}
+body.landing-page div.sub-pages > div.row{}
+body.landing-page div.sub-pages > div.row h3{}
+body.landing-page div.sub-pages > div.row h3:hover{}
+body.landing-page div.sub-pages > div.row p{}
+body.landing-page div.sub-pages > div.row div.description{}
+.read-more{}
+.read-more:hover{}
+body.landing-page div.sub-pages .thumb{}
+body.landing-page div.left div.description p{}
+body.landing-page div.left div.description{}
+body.landing-page .thumb{}
+```
 
 ## Further reading
 
