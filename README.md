@@ -52,7 +52,23 @@ The html structure looks like
 	</div>
 </div>
 ```
-And our css selectors look like:
+And our css selectors look like
+```css
+~~body~~.landing-page div.sub-pages{}
+body.landing-page div.sub-pages > div.row{}
+body.landing-page div.sub-pages > div.row h3{}
+body.landing-page div.sub-pages > div.row h3:hover{}
+body.landing-page div.sub-pages > div.row p{}
+body.landing-page div.sub-pages > div.row div.description{}
+.read-more{}
+.read-more:hover{}
+body.landing-page div.sub-pages .thumb{}
+body.landing-page div.left div.description p{}
+body.landing-page div.left div.description{}
+body.landing-page .thumb{}
+```
+So how can we apply our BEM guidelines to this?
+1. We do not want any references to HTML in our css for specicifity reasons (I'll go into more detail later)
 ```css
 body.landing-page div.sub-pages{}
 body.landing-page div.sub-pages > div.row{}
@@ -67,7 +83,6 @@ body.landing-page div.left div.description p{}
 body.landing-page div.left div.description{}
 body.landing-page .thumb{}
 ```
-
 ## Further reading
 
 * https://en.bem.info/
@@ -75,4 +90,3 @@ body.landing-page .thumb{}
 * http://www.smashingmagazine.com/2012/04/a-new-front-end-methodology-bem/
 * https://css-tricks.com/bem-101/
 * http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
-* commit
