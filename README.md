@@ -31,8 +31,8 @@ I will pick on myself here with some examples of CSS I have written for previous
 
 ## Further reading
 
-* [https://en.bem.info/]
-* [http://getbem.com/]
-* [http://www.smashingmagazine.com/2012/04/a-new-front-end-methodology-bem/]
-* [https://css-tricks.com/bem-101/]
-* [http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/]
+* https://en.bem.info/
+* http://getbem.com/
+* http://www.smashingmagazine.com/2012/04/a-new-front-end-methodology-bem/
+* https://css-tricks.com/bem-101/
+* http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
