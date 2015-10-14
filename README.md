@@ -75,3 +75,4 @@ body.landing-page .thumb{}
 * http://www.smashingmagazine.com/2012/04/a-new-front-end-methodology-bem/
 * https://css-tricks.com/bem-101/
 * http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
+* commit
