@@ -1,6 +1,7 @@
 # C2 CSS Style Guide
 ### Table of contents
 1. [Why](#why)
+2. 
 ___
 ## Why
 We need to change our approach to CSS. 
