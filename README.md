@@ -21,7 +21,7 @@ This isn't a ruleset that you must follow 100% and salute before you go to bed b
 
 ## How
 
-Using a method called [BEM](https://en.bem.info/).
+~~Using~~ a method called [BEM](https://en.bem.info/).
 
 BEM stands for Block Element Modifier and it is more simple than it sounds.
 
