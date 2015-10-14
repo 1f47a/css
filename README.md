@@ -31,7 +31,9 @@ I will pick on myself here with some examples of CSS I have written for previous
 
 In [Mackillop](http://mackillop.c2gloo.net/) we have a simple sub-pages section.
 
-![Mackillop sub-pages example](https://github.com/lclghst/css/blob/master/img/example1.png)
+![Mackillop sub-pages example](https://github.com/lclghst/css/img/example1.png)
+
+
 
 ## Further reading
 
