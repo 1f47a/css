@@ -18,6 +18,8 @@
 
 ## Why
 
+![tru story](http://cdn.meme.am/instances/59066896.jpg)
+
 We need to change our approach to CSS. 
 
 This isn't a ruleset that you must follow 100% and salute before you go to bed but rather a guide to how we can make our CSS:
@@ -152,6 +154,8 @@ To further this example, now that we have uncoupled the style from the markup, w
 
 ## Modifiers
 
+![waiting](http://blog.swapnilsingh.me/content/images/2014/11/56552213.jpg)
+
 Ok that's fine for basic classes but what about warnings, success, hover, active states etc?
 
 This is where the M of [BEM] comes into play.
@@ -206,6 +210,8 @@ Hmmm... that `.menu__link.active` doesn't look right. What happens if we want to
 Instead, let's create a Modifier class called `.menu__link--active`. This way we can apply it to our menu links and know it wont get inherited by another active state on some other element.
 
 ## Benefits
+
+[what if I put in more memes](http://cdn.meme.am/instances/54300082.jpg)
 
 From our example above, our CSS has become:
 
@@ -279,6 +285,8 @@ Yes it is long, yes it is ugly but it makes it a whole lot easier for someone to
 
 ## Animation
 
+![more memes I say](http://cdn.meme.am/instances/500x/51253042.jpg)
+
 A few performance gains we can easily make.
 
 Try not to use jQuery `$.animate()`. 
@@ -326,9 +334,30 @@ As long as the CSS you are writing is:
 
 ## Future
 
-* blah
+![meme](https://memeexplorer.com/cache/846.jpg)
+
+These things are being used in the real world right now. None of these things are new or should even be considered 'cutting edge'.
+
+Some things that I think could be worth looking in to, eventually
+
+##### Preprocessors
+
+* [SASS](http://sass-lang.com/)
+* [LESS](http://lesscss.org/)
+* [Stylus](https://learnboost.github.io/stylus/)
+* [PostCSS](https://github.com/postcss/postcss)
+
+##### Build tools
+
+These sorts of tools work in Visual Studio as well!
+
+* [nodejs](https://nodejs.org/) & [NPM](https://www.npmjs.com/)
+* [gulp](http://gulpjs.com/)
+* [Grunt](http://gruntjs.com/)
 
 ## Further reading
+
+For more BEM information:
 
 * https://en.bem.info/
 * http://getbem.com/
