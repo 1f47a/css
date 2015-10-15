@@ -211,7 +211,7 @@ Instead, let's create a Modifier class called `.menu__link--active`. This way we
 
 ## Benefits
 
-[what if I put in more memes](http://cdn.meme.am/instances/54300082.jpg)
+![what if I put in more memes](http://cdn.meme.am/instances/54300082.jpg)
 
 From our example above, our CSS has become:
 
