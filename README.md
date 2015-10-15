@@ -288,6 +288,24 @@ This applies also to using `position: absolute`. Positioning with `transform` av
 
 ## Why BEM?
 
+![more memes](http://i0.wp.com/www.developermemes.com/wp-content/uploads/2013/07/Web-Developer-What-I-Actually-Do-Meme.jpg)
+
+There are many different approaches to writing CSS. 
+
+For example
+
+* [OOCSS](https://github.com/stubbornella/oocss/wiki) (Object Oriented CSS)
+* [BEM] (You should know this one by now 😉)
+* [SMACSS](https://smacss.com/) (Scalable and Modular Architecture for CSS)
+* [ACSS](http://acss.io/) (Atomic CSS)
+* [SUIT CSS](https://suitcss.github.io/)
+
+There is no silver-bullet for writing **the best** CSS.
+
+Some of the above examples are more for huge enterprise corporations, or they rely on different tools/workflow.
+
+For me, BEM 'just werks'. It's a tiny bit of effort for a lot of gain.
+
 ## tl;dr
 
 ![didn't read lol](http://i.imgur.com/Na81R.gif)
