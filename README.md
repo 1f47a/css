@@ -255,4 +255,4 @@ By putting a little more effort into our class names and separating our CSS from
 * https://css-tricks.com/bem-101/
 * http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
 
-[BEM](https://en.bem.info/)
+[BEM]: https://en.bem.info/
