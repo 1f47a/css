@@ -11,9 +11,10 @@
 5. [Modifiers](#modifiers)
 6. [Javascript](#javascript)
 7. [Animation](#animation)
-8. [tl;dr](#tldr)
-9. [The Future](#the-future)
-10. [Further reading](#further-reading)
+8. [Why BEM?](#why-bem)
+9. [tl;dr](#tldr)
+10. [The Future](#the-future)
+11. [Further reading](#further-reading)
 
 ## Why
 
@@ -30,7 +31,7 @@ This isn't a ruleset that you must follow 100% and salute before you go to bed b
 
 ## How
 
-Using a method called [BEM](https://en.bem.info/).
+Using a method called [BEM].
 
 BEM stands for Block Element Modifier and it is more simple than it sounds.
 
@@ -80,7 +81,7 @@ body.landing-page div.left div.description{}
 body.landing-page .thumb{}
 ```
 
-So how can we apply our BEM guidelines to this?
+So how can we apply our [BEM] guidelines to this?
 
 1. We do not want any references to HTML in our css for specificity reasons (I'll go into more detail later)
 
@@ -100,7 +101,7 @@ So how can we apply our BEM guidelines to this?
 
    eg. `.sub-pages__description`
 
-This technique is taken from [BEM](https://en.bem.info/).
+This technique is [BEM].
 
 Let's apply it to our sub-pages module, so our HTML looks more like
 
@@ -151,7 +152,9 @@ To further this example, now that we have uncoupled the style from the markup, w
 
 ## Modifiers
 
-Blah
+Ok that's fine for basic classes but what about warnings, success, hover, active states etc?
+
+This is where the M of [BEM]
 
 ## Benefits
 
@@ -230,6 +233,8 @@ Try not to use jQuery `$.animate()`.
 Instead of moving elements with `Top` `Right` `Bottom` `Left` use `translate` and `transform`.
 This applies also to using `position: absolute`. Positioning with `transform` avoids choppy FPS and poor animation performance.
 
+## Why BEM?
+
 ## tl;dr
 
 ![didn't read lol](http://i.imgur.com/Na81R.gif)
@@ -249,3 +254,5 @@ By putting a little more effort into our class names and separating our CSS from
 * http://www.smashingmagazine.com/2012/04/a-new-front-end-methodology-bem/
 * https://css-tricks.com/bem-101/
 * http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
+
+[BEM](https://en.bem.info/)
