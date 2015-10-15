@@ -7,14 +7,15 @@
 1. [Why](#why)
 2. [How](#how)
 3. [Example](#example)
-4. [Benefits](#benefits)
+4. [Example 2](#example-2)
 5. [Modifiers](#modifiers)
-6. [Javascript](#javascript)
-7. [Animation](#animation)
-8. [Why BEM?](#why-bem)
-9. [tl;dr](#tldr)
-10. [Future](#future)
-11. [Further reading](#further-reading)
+6. [Benefits](#benefits)
+7. [Javascript](#javascript)
+8. [Animation](#animation)
+9. [Why BEM?](#why-bem)
+10. [tl;dr](#tldr)
+11. [Future](#future)
+12. [Further reading](#further-reading)
 
 ## Why
 
@@ -150,6 +151,38 @@ To further this example, now that we have uncoupled the style from the markup, w
 		</div>
 	</li>
 </ul>
+```
+
+## Example 2
+
+Another example from [Mackillop](https://www.mackillop.org.au/), this time the menu.
+
+```html
+<div class="custom-nav">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="menu-bar">
+                <ul class="custom-nav">
+                    <li class="selected"><a>Home</a></li>
+                    <li><a>MacKillop</a></li>
+                    <li><a>Our Services</a></li>
+                    <li><a>How You Can Help</a></li>
+                    <li><a>News and Media</a></li>
+                    <li><a>Careers</a></li>
+                    <li><a>Contact Us</a></li>
+                    <li class="search">
+                        <input type="text" placeholder="Search">
+                        <img class="close" src="/assets/images/close-icon.png" style="display: none;">
+                        <div class="autocomplete" style="display: none;"></div>
+                    </li>
+                </ul>
+            </div>        
+        </div>
+    </div>
+</div>
+
+```css
+
 ```
 
 ## Modifiers
