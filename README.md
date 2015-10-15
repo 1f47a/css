@@ -7,9 +7,11 @@
 1. [Why](#why)
 2. [How](#how)
 3. [Example 1](#example-1)
-4. [Benefits] (#benefits)
-5. [Javascript] (#javascript)
-5. [Further reading](#further-reading)
+4. [Benefits](#benefits)
+5. [Javascript](#javascript)
+6. [Animation](#animation)
+7. [tl;dr](#tl-dr)
+8. [Further reading](#further-reading)
 
 ## Why
 
@@ -190,17 +192,39 @@ and our js
 ```javascript
 $('.subscribe_submit').click(function ()
 {
-  $(this).parent().find('ul').slideToggle('fast', function () { return false; });
+	$(this).parent().find('ul').slideToggle('fast', function () { return false; });
 });
 ```
 
+We apply our new `js` only class `js-toggleParent`.
 
+```html
+<button class=”subscribe__submit btn js-toggleParent”>Submit</button>
+```
 
+Update our Javascript code
 
+```javascript
+$('.js-toggleParent').click(function ()
+{
+	$(this).parent().find('ul').slideToggle('fast', function () { return false; });
+});
+```
 
+Now we can change styles with ease. Also it is quite clear that there is a Javascript event attached to this element and the name tells us what it does.
 
+Yes it is long, yes it is ugly but it makes it a whole lot easier for someone to look at your code and know what is going on and for someone else to make any changes without breaking the styles or scripts.
 
+## Animation
 
+A few performance gains we can easily make.
+
+Try not to use jQuery `$.animate()`. 
+
+Instead of moving elements with `Top` `Right` `Bottom` `Left` use `translate` and `transform`.
+This applies also to using `position: absolute`. Positioning with `transform` avoids choppy FPS and poor animation performance.
+
+## tl;dr
 
 
 ## Further reading
