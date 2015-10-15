@@ -6,14 +6,14 @@
 
 1. [Why](#why)
 2. [How](#how)
-3. [Example 1](#example-1)
+3. [Example](#example)
 4. [Benefits](#benefits)
 5. [Modifiers](#modifiers)
 6. [Javascript](#javascript)
 7. [Animation](#animation)
 8. [Why BEM?](#why-bem)
 9. [tl;dr](#tldr)
-10. [The Future](#the-future)
+10. [Future](#future)
 11. [Further reading](#further-reading)
 
 ## Why
@@ -35,7 +35,7 @@ Using a method called [BEM].
 
 BEM stands for Block Element Modifier and it is more simple than it sounds.
 
-## Example 1
+## Example
 
 I will pick on myself here with some examples of CSS I have written for previous projects.
 
@@ -154,7 +154,56 @@ To further this example, now that we have uncoupled the style from the markup, w
 
 Ok that's fine for basic classes but what about warnings, success, hover, active states etc?
 
-This is where the M of [BEM]
+This is where the M of [BEM] comes into play.
+
+Here we have a simple nav menu
+
+```html
+<nav>
+  <ul class="menu">
+    <li><a class="active">Home</a></li>
+    <li><a>About</a></li>
+    <li><a>Contact</a></li>
+  </ul>
+</nav>
+```
+
+```css
+ul.menu {}
+ul.menu > li {}
+ul.menu > li > a {}
+ul.menu > li > a.active {}
+```
+
+Now let's wave our magic [BEM] wand over the code to get
+
+```html
+<nav>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link active">Home</a></li>
+    <li class="menu__item"><a class="menu__link">About</a></li>
+    <li class="menu__item"><a class="menu__link">Contact</a></li>
+  </ul>
+</nav>
+```
+
+```css
+.menu {}
+  .menu__item {}
+  .menu__link {}
+    .menu__link.active {}
+```
+
+Hmmm... that `.menu__link.active` doesn't look right. What happens if we want to apply an active state to a button or input? We either specify a long `.form button.submit.active` sort of selector, or we might run the risk of inheriting an unwanted active state from another rule.
+
+```css
+.menu {}
+  .menu__item {}
+  .menu__link {}
+    .menu__link--active {}
+```
+
+Instead, let's create a Modifier class called `.menu__link--active`. This way we can apply it to our menu links and know it wont get inherited by another active state on some other element.
 
 ## Benefits
 
@@ -163,21 +212,25 @@ From our example above, our CSS has become:
 ##### Modular
 
    We can put the subpage module anywhere else in the website and not have to write any more CSS for it.
-   
+
 ##### Flexible
 
    If we have to make changes to the HTML structure, we can just add whatever we need to, without changing the selector or class name.
-   
+
 ##### Faster
 
    Believe it or not, our CSS and web pages will load faster now. Not only because we have reduced the length of the class names but because we have reduced how specific our selectors are.
-   
+
    CSS is a funny beast and it actually reads a CSS selector from right to left. Crazy huh?
-   
+
    Take for example `body.landing-page div.sub-pages > div.row div.description{}`
    First it looks for all elements with the `.description` class, then only the `<div>` with `.description`, then only the `<div>` with `.description` that are inside a `.row` parent, then only the `<div>` with `.description` that are inside a `.row` parent that is a `<div>` etc etc
 
    So you can see it is a lot more efficient (and quicker) for our browsers to only have to match the single class.
+
+##### Self documenting
+
+   Almost. It now takes less time for our poor stressed front-end developers to look at our BEM-ified CSS and understand what goes where and what effect changing such and such class will do throughout the site.
 
 ## Javascript
 
@@ -243,7 +296,17 @@ This guide is to help us all write better CSS. But it is just that - a guide.
 
 By putting a little more effort into our class names and separating our CSS from our HTML and Javascript, we can make developing and maintaining our front-end code a lot nicer.
 
-## The future
+The essence of [BEM]: Block__Element--Modifier
+
+If you don't like double__underscores or double--hyphens then use something else. 
+
+As long as the CSS you are writing is:
+
+* Uncoupled from the HTML. (no `div.class`, `ul.something`.)
+* Uncoupled from the Javascript. (no `$("div.logo").click({});` Bind to a `js` prefixed class.)
+* Low specificity. (Flat css classes. Keep cascading to an absolute minimum. no `body.class .menu .item .link >  span`.) 
+
+## Future
 
 * blah
 
