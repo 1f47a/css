@@ -8,10 +8,12 @@
 2. [How](#how)
 3. [Example 1](#example-1)
 4. [Benefits](#benefits)
-5. [Javascript](#javascript)
-6. [Animation](#animation)
-7. [tl;dr](#tl-dr)
-8. [Further reading](#further-reading)
+5. [Modifiers](#modifiers)
+6. [Javascript](#javascript)
+7. [Animation](#animation)
+8. [tl;dr](#tldr)
+9. [The Future](#the-future)
+10. [Further reading](#further-reading)
 
 ## Why
 
@@ -147,6 +149,10 @@ To further this example, now that we have uncoupled the style from the markup, w
 </ul>
 ```
 
+## Modifiers
+
+Blah
+
 ## Benefits
 
 From our example above, our CSS has become:
@@ -226,6 +232,15 @@ This applies also to using `position: absolute`. Positioning with `transform` av
 
 ## tl;dr
 
+![didn't read lol](http://i.imgur.com/Na81R.gif)
+
+This guide is to help us all write better CSS. But it is just that - a guide.
+
+By putting a little more effort into our class names and separating our CSS from our HTML and Javascript, we can make developing and maintaining our front-end code a lot nicer.
+
+## The future
+
+* blah
 
 ## Further reading
 
