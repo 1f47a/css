@@ -149,15 +149,15 @@ To further this example, now that we have uncoupled the style from the markup, w
 
 From our example above, our CSS has become:
 
-* Modular
+##### Modular
 
    We can put the subpage module anywhere else in the website and not have to write any more CSS for it.
    
-* Flexible
+##### Flexible
 
    If we have to make changes to the HTML structure, we can just add whatever we need to, without changing the selector or class name.
    
-* Faster
+##### Faster
 
    Believe it or not, our CSS and web pages will load faster now. Not only because we have reduced the length of the class names but because we have reduced how specific our selectors are.
    
@@ -169,6 +169,39 @@ From our example above, our CSS has become:
    So you can see it is a lot more efficient (and quicker) for our browsers to only have to match the single class.
 
 ## Javascript
+
+![Chris at work](http://i.imgur.com/rZDKwoj.gif)
+
+Now we have uncoupled our CSS from our HTML, it is time to do the same with our Javascript.
+
+There is no problem binding a Javascript event to a css class, it only becomes a problem when we use a class that is being used for style.
+
+The problem being that at the moment you can accidentally break our Javascript by changing a class name, or HTML element.
+
+What we can do instead is create a new class name that has no CSS styles associated with it, preferably prefixed with `js` so we can be even more clear in what the class is for.
+
+For example
+
+```html
+<button class=”subscribe__submit btn”>Submit</button>
+```
+
+and our js
+```javascript
+$('.subscribe_submit').click(function ()
+{
+  $(this).parent().find('ul').slideToggle('fast', function () { return false; });
+});
+```
+
+
+
+
+
+
+
+
+
 
 ## Further reading
 
