@@ -19,7 +19,7 @@
 
 ## Why
 
-![tru story](http://cdn.meme.am/instances/59066896.jpg)
+![just no](http://i.imgur.com/6bwGUFH.jpg)
 
 We need to change our approach to CSS. 
 
@@ -92,7 +92,7 @@ So how can we apply our [BEM] guidelines to this?
 
 2. The direct child selector `>` is probably overkill in 99% of cases. Why not just omit it here, along with `div.row`?
 
-  This way we are keeping our CSS separate from Bootstrap
+  This way we are keeping our CSS separate from Bootstrap.
 
    eg. ~~body~~`.landing-page `~~div~~`.sub-pages`~~> div.row div~~`.description`
 
@@ -180,14 +180,91 @@ Another example from [Mackillop](https://www.mackillop.org.au/), this time the m
         </div>
     </div>
 </div>
+```
 
 ```css
-
+div.custom-nav
+div.custom-nav div.row
+div.custom-nav div.row > div
+div.custom-nav div.row div.menu-bar
+div.custom-nav ul.custom-nav
+div.custom-nav ul.custom-nav > li
+div.custom-nav ul.custom-nav > li > a
+div.custom-nav ul.custom-nav > li.selected > a,
+div.custom-nav ul.custom-nav > li:hover > a
+div.custom-nav ul.custom-nav > li:first-child > a
+div.custom-nav ul.custom-nav > li.search
+div.custom-nav ul.custom-nav > li.search
+div.custom-nav ul.custom-nav > li.search input
+div.custom-nav ul.custom-nav > li.search img
+div.custom-nav ul.custom-nav > li.search input::-webkit-input-placeholder
+div.custom-nav ul.custom-nav > li.search input:-moz-placeholder
+div.custom-nav ul.custom-nav > li.search input::-moz-placeholder
+div.custom-nav ul.custom-nav > li.search input:-ms-input-placeholder
+div.custom-nav ul.custom-nav > li.search input:focus
+div.custom-nav ul.custom-nav div.autocomplete
+div.custom-nav ul.custom-nav div.autocomplete span
+div.custom-nav ul.custom-nav div.autocomplete span:hover
 ```
+
+Then something like this... Remember [BEM] isn't a strict ruleset, just a loose guide to writing easier CSS.
+
+You can't really go wrong with trying it; it will still be better than what we are doing now.
+
+```html
+<div class="menu-wrap__outer">
+    <div class="row menu-wrap">
+        <div class="col-xs-12 menu-wrap__inner">
+            <div class="menu__bar">
+                <ul class="menu">
+                    <li class="menu__item menu__item--selected"><a class="menu__link">Home</a></li>
+                    <li class="menu__item"><a class="menu__link">MacKillop</a></li>
+                    <li class="menu__item"><a class="menu__link">Our Services</a></li>
+                    <li class="menu__item"><a class="menu__link">How You Can Help</a></li>
+                    <li class="menu__item"><a class="menu__link">News and Media</a></li>
+                    <li class="menu__item"><a class="menu__link">Careers</a></li>
+                    <li class="menu__item"><a class="menu__link">Contact Us</a></li>
+                    <li class="search">
+                        <input class="search__input" type="text" placeholder="Search">
+                        <img class="search__close" src="/assets/images/close-icon.png" style="display: none;">
+                        <div class="search__autocomplete" style="display: none;"></div>
+                    </li>
+                </ul>
+            </div>        
+        </div>
+    </div>
+</div>
+```
+
+```css
+.menu-wrap__outer
+.menu-wrap
+.menu-wrap__inner
+.menu__bar
+.menu
+.menu__item
+.menu__link
+.menu__item--selected .menu__link,
+.menu__item:hover .menu__link
+.menu__item:first-child .menu__link
+.search
+.search__input
+.search__close
+.search__input::-webkit-input-placeholder
+.search__input:-moz-placeholder
+.search__input::-moz-placeholder
+.search__input:-ms-input-placeholder
+.search__input:focus
+.search__autocomplete
+.search__autocomplete span
+.search__autocomplete span:hover
+```
+
+Like I said before, not a 100% perfect 
 
 ## Modifiers
 
-![waiting](http://blog.swapnilsingh.me/content/images/2014/11/56552213.jpg)
+![yes i am dog](http://i.imgur.com/SOIqChP.jpg?1)
 
 Ok that's fine for basic classes but what about warnings, success, hover, active states etc?
 
@@ -204,6 +281,8 @@ Here we have a simple nav menu
   </ul>
 </nav>
 ```
+
+
 
 ```css
 ul.menu {}
@@ -244,7 +323,7 @@ Instead, let's create a Modifier class called `.menu__link--active`. This way we
 
 ## Benefits
 
-![what if I put in more memes](http://cdn.meme.am/instances/54300082.jpg)
+![having a good day](http://i.imgur.com/9RPDCTC.gif)
 
 From our example above, our CSS has become:
 
@@ -318,7 +397,7 @@ Yes it is long, yes it is ugly but it makes it a whole lot easier for someone to
 
 ## Animation
 
-![more memes I say](http://cdn.meme.am/instances/500x/51253042.jpg)
+![amirite](http://i.imgur.com/At6RaHk.png)
 
 A few performance gains we can easily make.
 
