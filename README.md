@@ -184,27 +184,26 @@ Another example from [Mackillop](https://www.mackillop.org.au/), this time the m
 
 ```css
 div.custom-nav
-div.custom-nav div.row
-div.custom-nav div.row > div
-div.custom-nav div.row div.menu-bar
+    div.custom-nav div.row
+    div.custom-nav div.row > div
+    div.custom-nav div.row div.menu-bar
 div.custom-nav ul.custom-nav
-div.custom-nav ul.custom-nav > li
-div.custom-nav ul.custom-nav > li > a
-div.custom-nav ul.custom-nav > li.selected > a,
-div.custom-nav ul.custom-nav > li:hover > a
-div.custom-nav ul.custom-nav > li:first-child > a
-div.custom-nav ul.custom-nav > li.search
-div.custom-nav ul.custom-nav > li.search
-div.custom-nav ul.custom-nav > li.search input
-div.custom-nav ul.custom-nav > li.search img
-div.custom-nav ul.custom-nav > li.search input::-webkit-input-placeholder
-div.custom-nav ul.custom-nav > li.search input:-moz-placeholder
-div.custom-nav ul.custom-nav > li.search input::-moz-placeholder
-div.custom-nav ul.custom-nav > li.search input:-ms-input-placeholder
-div.custom-nav ul.custom-nav > li.search input:focus
+    div.custom-nav ul.custom-nav > li
+        div.custom-nav ul.custom-nav > li > a
+            div.custom-nav ul.custom-nav > li.selected > a,
+            div.custom-nav ul.custom-nav > li:hover > a
+            div.custom-nav ul.custom-nav > li:first-child > a
+    div.custom-nav ul.custom-nav > li.search
+        div.custom-nav ul.custom-nav > li.search input
+        div.custom-nav ul.custom-nav > li.search img
+        div.custom-nav ul.custom-nav > li.search input::-webkit-input-placeholder
+        div.custom-nav ul.custom-nav > li.search input:-moz-placeholder
+        div.custom-nav ul.custom-nav > li.search input::-moz-placeholder
+        div.custom-nav ul.custom-nav > li.search input:-ms-input-placeholder
+        div.custom-nav ul.custom-nav > li.search input:focus
 div.custom-nav ul.custom-nav div.autocomplete
-div.custom-nav ul.custom-nav div.autocomplete span
-div.custom-nav ul.custom-nav div.autocomplete span:hover
+    div.custom-nav ul.custom-nav div.autocomplete span
+    div.custom-nav ul.custom-nav div.autocomplete span:hover
 ```
 
 Then something like this... Remember [BEM] isn't a strict ruleset, just a loose guide to writing easier CSS.
@@ -238,26 +237,26 @@ You can't really go wrong with trying it; it will still be better than what we a
 
 ```css
 .menu-wrap__outer
-.menu-wrap
-.menu-wrap__inner
+    .menu-wrap
+        .menu-wrap__inner
 .menu__bar
 .menu
-.menu__item
-.menu__link
-.menu__item--selected .menu__link,
-.menu__item:hover .menu__link
-.menu__item:first-child .menu__link
+    .menu__item
+        .menu__link
+            .menu__item--selected .menu__link,
+            .menu__item:hover .menu__link
+            .menu__item:first-child .menu__link
 .search
-.search__input
-.search__close
-.search__input::-webkit-input-placeholder
-.search__input:-moz-placeholder
-.search__input::-moz-placeholder
-.search__input:-ms-input-placeholder
-.search__input:focus
+    .search__input
+    .search__close
+        .search__input::-webkit-input-placeholder
+        .search__input:-moz-placeholder
+        .search__input::-moz-placeholder
+        .search__input:-ms-input-placeholder
+        .search__input:focus
 .search__autocomplete
-.search__autocomplete span
-.search__autocomplete span:hover
+    .search__autocomplete span
+        .search__autocomplete span:hover
 ```
 
 Like I said before, not a 100% perfect silver bullet but you get the gist.
@@ -415,7 +414,7 @@ There are many different approaches to writing CSS.
 For example
 
 * [OOCSS](https://github.com/stubbornella/oocss/wiki) (Object Oriented CSS)
-* [BEM] (You should know this one by now 😉)
+* [BEM] You should know this one by now 😉
 * [SMACSS](https://smacss.com/) (Scalable and Modular Architecture for CSS)
 * [ACSS](http://acss.io/) (Atomic CSS)
 * [SUIT CSS](https://suitcss.github.io/)
