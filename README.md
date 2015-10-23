@@ -260,7 +260,7 @@ You can't really go wrong with trying it; it will still be better than what we a
 .search__autocomplete span:hover
 ```
 
-Like I said before, not a 100% perfect 
+Like I said before, not a 100% perfect silver bullet but you get the gist.
 
 ## Modifiers
 
